@@ -1,7 +1,10 @@
+import styles from './Header.module.css';
+import todoLogo from '../assets/Logo.svg';
+
 export function Header() {
     return (
-      <header>
-        <strong>Header</strong>
-      </header>
+      <header className={styles.header}>
+        <img src={todoLogo} alt='Logotipo'/>
+    </header>
     );
   }

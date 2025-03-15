@@ -1,0 +1,83 @@
+.createTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -1.688rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 46rem;
+}
+
+.createTask form {
+  display: flex;
+  gap: 8px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.createTask textarea {
+  width: 39.875rem;
+  height: 3.375rem;
+  resize: none;
+  background: var(--gray-500);
+  color: var(--gray-100);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 150%;
+  padding: 0.75rem;
+}
+
+.createTask textarea:focus {
+  border-color: var(--purple-dark);
+  outline: none;
+}
+
+.createTask button {
+  width: 5.625rem;
+  height: 3.375rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+.createTask button:hover {
+  background-color: var(--blue);
+}
+
+.createTask button:disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 780px) {
+  .createTask {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .createTask form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .createTask textarea {
+    width: 100%;
+  }
+
+  .createTask button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
