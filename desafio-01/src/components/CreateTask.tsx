@@ -6,11 +6,10 @@ import { PlusCircle } from 'phosphor-react';
 import { v4 as uuidv4 } from 'uuid';
 
 interface CreateTaskProps {
-  tasks: ITask[];
   setTasks: React.Dispatch<React.SetStateAction<ITask[]>>;
 }
 
-export function CreateTask({ tasks, setTasks }: CreateTaskProps) {
+export function CreateTask({ setTasks }: CreateTaskProps) {
 
   const [newTaskTitle, setNewTaskTitle] = useState('');
 

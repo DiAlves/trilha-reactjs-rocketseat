@@ -1,8 +1,8 @@
 import './index.css';
-import './App.css';
 
 import { ITask } from './ITask';
 import { Header } from './components/Header';
+import { Header as HeaderTasks } from './components/list/Header';
 import { CreateTask } from './components/CreateTask';
 import { useState } from 'react'
 
@@ -13,8 +13,11 @@ export function App() {
     <div>
       <Header />
       <CreateTask
-        tasks={tasks}
         setTasks={setTasks}
+      />
+
+      <HeaderTasks 
+        tasks={tasks}
       />
     </div>
   )

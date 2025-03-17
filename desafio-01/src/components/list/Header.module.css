@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.313rem auto;
+  width: 100%;
+  max-width: 46rem;
+  padding: 0px 4px;
+}
+
+.header strong {
+  font-size: 0.875rem;
+}
+
+.header strong:first-of-type {
+  color: var(--blue);
+}
+
+.header strong:last-of-type {
+  color: var(--purple);
+}
+
+.count {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px 0.5rem;
+}
