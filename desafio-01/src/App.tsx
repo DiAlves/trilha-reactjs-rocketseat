@@ -4,6 +4,7 @@ import { ITask } from './ITask';
 import { Header } from './components/Header';
 import { Header as HeaderTasks } from './components/list/Header';
 import { Empty } from './components/list/Empty';
+import { Task } from './components/list/Task';
 import { CreateTask } from './components/CreateTask';
 import { useState } from 'react'
 
@@ -21,7 +22,9 @@ export function App() {
         tasks={tasks}
       />
 
-      <Empty />
+      <Task
+        tasks={tasks}
+      />
     </div>
   )
 }

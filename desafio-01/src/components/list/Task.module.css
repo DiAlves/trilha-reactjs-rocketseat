@@ -1,0 +1,91 @@
+.task {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 46rem;
+  padding: 1rem;
+
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+}
+
+.task div {
+  display: flex;
+  gap: 0.80rem;
+}
+
+.task input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.task input + label {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.task input + label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.task input:hover + label::before {
+  background-color: var(--blue-dark);
+}
+
+.task input:checked + label::before {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.task input:checked + label::after {
+  content: "✔";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  font-size: 12px;
+  color: var(--gray-100);
+}
+
+.task p {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.task button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-300);
+  padding: 6px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.task button:hover {
+  background-color: var(--gray-600);
+  color: var(--danger);
+}
