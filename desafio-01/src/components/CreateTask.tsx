@@ -24,7 +24,7 @@ export function CreateTask({ setTasks }: CreateTaskProps) {
       isChecked: false,
     }
 
-    setTasks((state) => [...state, newTask]);
+    setTasks((state) => [newTask, ...state]);
     setNewTaskTitle('');
   }
 
