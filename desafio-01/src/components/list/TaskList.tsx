@@ -5,13 +5,14 @@ import styles from './TaskList.module.css';
 interface TaskProps {
   tasks: ITask[];
   handleToggleTask: (id: string, value: boolean) => void;
+  onDeleteTask: (id: string) => void;
 }
 
-export function TaskList({ tasks, handleToggleTask  }: TaskProps ) {
+export function TaskList({ tasks, handleToggleTask, onDeleteTask  }: TaskProps ) {
 
-  function teste() {
-    console.log(tasks);
-  }
+  function handleDeleteTask(id: string) {
+		onDeleteTask(id);
+	}
 
   return (
     <div>
@@ -32,7 +33,7 @@ export function TaskList({ tasks, handleToggleTask  }: TaskProps ) {
               </p>
             </div>
       
-            <button title='Deletar comentário' onClick={teste}>
+            <button title='Deletar comentário' onClick={() => handleDeleteTask(task.id)}>
               <Trash size={20}/>
             </button>
           </div>

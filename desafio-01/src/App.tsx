@@ -12,7 +12,6 @@ export function App() {
   const [tasks, setTasks] = useState<ITask[]>([]);
 
   function handleToggleTask(id: string, value: boolean) {
-
     const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
         return { ...task, isChecked: value }
@@ -22,6 +21,16 @@ export function App() {
     })
 
     setTasks(updatedTasks)
+  }
+
+  function onDeleteTask(id: string) {
+    if (!confirm('Tem certeza que deseja excluir esta tarefa?')) {
+      return
+    }
+
+    const filteredTasks = tasks.filter((task) => task.id !== id);
+
+    setTasks(filteredTasks)
   }
   
   return (
@@ -39,10 +48,10 @@ export function App() {
         <TaskList
           tasks={tasks}
           handleToggleTask={handleToggleTask}
+          onDeleteTask={onDeleteTask}
         /> : 
         <Empty />
       }
-      
     </div>
   )
 }
